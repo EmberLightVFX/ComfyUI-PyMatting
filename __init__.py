@@ -50,7 +50,7 @@ def run_script(cmd, cwd="."):
 
 
 try:
-    from .PyMatte import PyMatte
+    from .PyMatting import PyMatting
 except Exception:
     my_path = os.path.dirname(__file__)
     requirements_path = os.path.join(my_path, "requirements.txt")
@@ -60,7 +60,7 @@ except Exception:
     run_script([sys.executable, "-s", "-m", "pip", "install", "-r", requirements_path])
 
     try:
-        from .PyMatte import PyMatte
+        from .PyMatting import PyMatting
     except Exception:
         print(
             "## [ERROR] ComfyUI-Manager: Attempting to reinstall dependencies using an alternative method."
@@ -79,7 +79,7 @@ except Exception:
         )
 
         try:
-            from .PyMatte import PyMatte
+            from .PyMatting import PyMatting
         except Exception:
             print(
                 "## [ERROR] ComfyUI-Manager: Failed to install the GitPython package in the correct Python environment. Please install it manually in the appropriate environment. (You can seek help at https://app.element.io/#/room/%23comfyui_space%3Amatrix.org)"
@@ -91,5 +91,5 @@ except Exception:
 # NOTE: names should be globally unique
 
 NODE_CLASS_MAPPINGS = {
-    "PyMatte": PyMatte,
+    "PyMatting": PyMatting,
 }

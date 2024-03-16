@@ -15,7 +15,7 @@ from pymatting import (
 )
 
 
-class PyMatte:
+class PyMatting:
     def __init__(self):
         self.model = None
         self.tokenizer = None
